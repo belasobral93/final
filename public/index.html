@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Ticket Manager</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Bootstrap JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <!-- js -->
+  <script src="js/app.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet"></link>
+</head>
+
+<body>
+  <div id="popUp" class="loader hidden">
+  </div>
+  <div class="container">
+    <div class="panel-group">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h1>Your Ticket Inventory</h1>
+        </div>
+        <div class="panel-body">
+          <form action="" id="message-form">
+            <div class="form-group">
+              <label for="venue"><h1>Select your venue:</h1></label>
+                 <select class="form-control" id="venue">
+                   <option value="audio-nightclub-1" >Audio</option>
+                   <option value="bill-graham-civic-auditorium">Bill Graham</option>
+                   <option value="halcyon-5">Halcyon</option>
+                   <option value="mezzanine">Mezzanine</option>
+                   <option value="the-fillmore">The Fillmore</option>
+                   <option value="the-regency-ballroom">Regency Ballroom</option>
+                   <option value="1015-folsom">1015 Folsom</option>
+                 </select>
+            </div>
+              <label for="date"><h3>Select a date range:</h3></label> 
+              <p><input type="date" id="startDate"> to <input type="date" id="endDate"></p>
+              <button type="button" class="btn" id="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+ <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading" id="resultsHeading">
+          <h2>Search Results</h2>
+        </div>
+        <div class="panel-body">
+          <ul id="resultsList">
+          </ul>
+        </div>
+      </div>
+    </div>
+
+     <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading" id="costsHeading">
+          <h2 id="totalCost">Total Concert Costs Are: $<span></span></h2>
+        </div>
+        </div>
+        </div>
+
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading" id="listings">
+          <h2>Listings</h2>
+        </div>
+        <div class="panel-body">
+          <ul class="message-board" id="messageBoard">
+          </ul>
+        </div>
+      </div>
+    </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
